@@ -9,6 +9,8 @@ Instantiate `BlurView` and add any views you want to blur as its subviews.
 Adjust its `blurRadius` property to control the level of blur.
 
 ```swift
+import BlurView
+
 let blurView = BlurView()
 blurView.blurRadius = 20
 blurView.addSubview(mySubview)
@@ -20,6 +22,21 @@ This view supports animating the blur radius using UIKit’s animation APIs:
 UIView.animate(withDuration: 0.3) {
   blurView.blurRadius = 10
 }
+```
+
+## Swift Package
+```swift
+.dependencies: [
+  .package(url: "https://github.com/juliensagot/uikit-blur-view", .upToNextMajor(from: "1.0.0"))
+]
+.targets: [
+  .target(
+    name: "Foo",
+    dependencies: [
+      .product(name: "BlurView", package: "uikit-blur-view")
+    ]
+  )
+]
 ```
 
 ## Example
