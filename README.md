@@ -42,6 +42,9 @@ UIView.animate(withDuration: 0.3) {
 ## Example
 Please take a look at the [DemoApp](Examples/DemoApp/).
 
+## Known issues
+- It doesn’t work with `UIViewPropertyAnimator`, and I have no idea how to make it work with it. (PRs are welcome!)
+
 ## ⚠️ Caution
 The Gaussian blur effect is produced via a call to a private API.  
 Although it has been obfuscated, using this package might result in **your app being rejected by Apple**, although this is very unlikely.  
